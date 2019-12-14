@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+{% block title %}CoPark!{% endblock %}
+
+{% block body %}
+
+<h3> <span> Add a new Parking :</span> </h3>
+
+    <form  method="POST">
+      <div class="form-group">
+        <label for="inputAddress">Name of the Road : </label>
+        {{ form_widget(form.name) }}
+      </div>
+
+      <div class="form-group">
+        <label for="inputAddress">Address  </label
+        >{{ form_widget(form.address) }}
+      </div>
+
+        <div class="form-group ">
+          <label for="inputCity">Zip Code</label> {{ form_widget(form.zipCode) }}
+        </div>
+        <div class="row">
+        <div class="form-group col-md-6">
+            <label for="inputCity">Longitude</label> {{ form_widget(form.longtitude) }}
+          </div>
+       
+        <div class="form-group col-md-6">
+          <label for="inputZip">Latitude</label> {{ form_widget(form.latitude) }}
+        </div>
+    </div>
+ 
+      <button type="submit" class="btn btn-outline-danger">Submit</button>
+    </form>
+
+    
+{% endblock %}
