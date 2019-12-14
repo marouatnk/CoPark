@@ -57,7 +57,6 @@ class ParkingType extends AbstractType
         $resolver->setDefaults([
             'data_class' => Parking::class,
             'csrf_protection' => true,
-
         ]);
     }
 }
