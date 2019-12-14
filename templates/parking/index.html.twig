@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CoPark!{% endblock %}
+
+{% block body %}
+<div class="row">
+    {% for parking in parkings %}
+    <div class="col-12 col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{parking.name}}</h5>
+                <p class="card-text">
+                    Address : {{parking.address}} <br>
+                    Zip Code : {{parking.ZipcOde}} <br>
+                    Country : {{parking.country}} <br>
+                </p>
+                <p> Its latitude is {{parking.latitude}} and its longitude is {{parking.longitude}}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+
+    <div>
+      <a href="{{path('add_parking')}}"> Click here to add another parking </a>
+    </div>
+{% endblock %}
+
