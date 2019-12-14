@@ -4,7 +4,7 @@ namespace App\DataFixtures;
 
 use App\Entity\Parking;
 use Doctrine\Bundle\FixturesBundle\Fixture;
-use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\Persistence\ObjectManager;
 /**
  * Les fixtures permettent de créer un jeu de données de développement
  * La commande pour lancer les fixtures : (bin/console doctrine:fixtures:load)
@@ -23,7 +23,7 @@ class AppFixtures extends Fixture
                     ->setLongitude('4.85')
                     ->setCountry('Lyon')
                     ->setLatitude('45.75')
-                    ->setAddress($i . ' Road of Liberty');
+                    ->setAddress($i . ' Rue de La liberté');
             $manager->persist($parking);
 
             }
